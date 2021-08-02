@@ -32,7 +32,7 @@ Public Class registro
 
 
     Protected Sub btn_guardar_Click(sender As Object, e As EventArgs) Handles btn_guardar.Click
-
+        'DPI 
         dpi = Convert.ToInt32(txtdpi.Text)
         nombre = txtnombre.Text
         hijos = txthijos.Text
