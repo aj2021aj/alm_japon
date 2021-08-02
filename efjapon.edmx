@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="JAPONModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Empleados">
+          <Key>
+            <PropertyRef Name="dpi_emp" />
+          </Key>
+          <Property Name="dpi_emp" Type="bigint" Nullable="false" />
+          <Property Name="nombre_emp" Type="nchar" MaxLength="70" />
+          <Property Name="hijos_emp" Type="int" />
+          <Property Name="salariobase_emp" Type="float" />
+          <Property Name="bono_emp" Type="float" />
+          <Property Name="creacion_emp" Type="date" />
+          <Property Name="iggs_emp" Type="float" />
+          <Property Name="irtra_emp" Type="float" />
+          <Property Name="bonopater_emp" Type="float" />
+          <Property Name="salario_total_emp" Type="float" />
+          <Property Name="salario_liquido_emp" Type="float" />
+        </EntityType>
+        <EntityType Name="usuarios">
+          <Key>
+            <PropertyRef Name="cod_usuario" />
+          </Key>
+          <Property Name="cod_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre_usuario" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="apellido_usuario" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="correo_usuario" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="contra_usuario" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="JAPONModelStoreContainer">
+          <EntitySet Name="Empleados" EntityType="Self.Empleados" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="JAPONModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Empleados">
+          <Key>
+            <PropertyRef Name="dpi_emp" />
+          </Key>
+          <Property Name="dpi_emp" Type="Int64" Nullable="false" />
+          <Property Name="nombre_emp" Type="String" MaxLength="70" FixedLength="true" Unicode="true" />
+          <Property Name="hijos_emp" Type="Int32" />
+          <Property Name="salariobase_emp" Type="Double" />
+          <Property Name="bono_emp" Type="Double" />
+          <Property Name="creacion_emp" Type="DateTime" Precision="0" />
+          <Property Name="iggs_emp" Type="Double" />
+          <Property Name="irtra_emp" Type="Double" />
+          <Property Name="bonopater_emp" Type="Double" />
+          <Property Name="salario_total_emp" Type="Double" />
+          <Property Name="salario_liquido_emp" Type="Double" />
+        </EntityType>
+        <EntityType Name="usuarios">
+          <Key>
+            <PropertyRef Name="cod_usuario" />
+          </Key>
+          <Property Name="cod_usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre_usuario" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="apellido_usuario" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="correo_usuario" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="contra_usuario" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="JAPONEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Empleados" EntityType="Self.Empleados" />
+          <EntitySet Name="usuarios" EntityType="Self.usuarios" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="JAPONModelStoreContainer" CdmEntityContainer="JAPONEntities">
+          <EntitySetMapping Name="Empleados">
+            <EntityTypeMapping TypeName="JAPONModel.Empleados">
+              <MappingFragment StoreEntitySet="Empleados">
+                <ScalarProperty Name="dpi_emp" ColumnName="dpi_emp" />
+                <ScalarProperty Name="nombre_emp" ColumnName="nombre_emp" />
+                <ScalarProperty Name="hijos_emp" ColumnName="hijos_emp" />
+                <ScalarProperty Name="salariobase_emp" ColumnName="salariobase_emp" />
+                <ScalarProperty Name="bono_emp" ColumnName="bono_emp" />
+                <ScalarProperty Name="creacion_emp" ColumnName="creacion_emp" />
+                <ScalarProperty Name="iggs_emp" ColumnName="iggs_emp" />
+                <ScalarProperty Name="irtra_emp" ColumnName="irtra_emp" />
+                <ScalarProperty Name="bonopater_emp" ColumnName="bonopater_emp" />
+                <ScalarProperty Name="salario_total_emp" ColumnName="salario_total_emp" />
+                <ScalarProperty Name="salario_liquido_emp" ColumnName="salario_liquido_emp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usuarios">
+            <EntityTypeMapping TypeName="JAPONModel.usuarios">
+              <MappingFragment StoreEntitySet="usuarios">
+                <ScalarProperty Name="cod_usuario" ColumnName="cod_usuario" />
+                <ScalarProperty Name="nombre_usuario" ColumnName="nombre_usuario" />
+                <ScalarProperty Name="apellido_usuario" ColumnName="apellido_usuario" />
+                <ScalarProperty Name="correo_usuario" ColumnName="correo_usuario" />
+                <ScalarProperty Name="contra_usuario" ColumnName="contra_usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

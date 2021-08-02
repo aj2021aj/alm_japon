@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JAPONModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Empleados">
+    <Key>
+      <PropertyRef Name="dpi_emp" />
+    </Key>
+    <Property Name="dpi_emp" Type="bigint" Nullable="false" />
+    <Property Name="nombre_emp" Type="nchar" MaxLength="70" />
+    <Property Name="hijos_emp" Type="int" />
+    <Property Name="salariobase_emp" Type="float" />
+    <Property Name="bono_emp" Type="float" />
+    <Property Name="creacion_emp" Type="date" />
+    <Property Name="iggs_emp" Type="float" />
+    <Property Name="irtra_emp" Type="float" />
+    <Property Name="bonopater_emp" Type="float" />
+    <Property Name="salario_total_emp" Type="float" />
+    <Property Name="salario_liquido_emp" Type="float" />
+  </EntityType>
+  <EntityType Name="usuarios">
+    <Key>
+      <PropertyRef Name="cod_usuario" />
+    </Key>
+    <Property Name="cod_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_usuario" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="apellido_usuario" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="correo_usuario" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="contra_usuario" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="JAPONModelStoreContainer">
+    <EntitySet Name="Empleados" EntityType="Self.Empleados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usuarios" EntityType="Self.usuarios" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

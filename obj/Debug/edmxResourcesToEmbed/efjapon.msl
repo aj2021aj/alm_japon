@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JAPONModelStoreContainer" CdmEntityContainer="JAPONEntities">
+    <EntitySetMapping Name="Empleados">
+      <EntityTypeMapping TypeName="JAPONModel.Empleados">
+        <MappingFragment StoreEntitySet="Empleados">
+          <ScalarProperty Name="dpi_emp" ColumnName="dpi_emp" />
+          <ScalarProperty Name="nombre_emp" ColumnName="nombre_emp" />
+          <ScalarProperty Name="hijos_emp" ColumnName="hijos_emp" />
+          <ScalarProperty Name="salariobase_emp" ColumnName="salariobase_emp" />
+          <ScalarProperty Name="bono_emp" ColumnName="bono_emp" />
+          <ScalarProperty Name="creacion_emp" ColumnName="creacion_emp" />
+          <ScalarProperty Name="iggs_emp" ColumnName="iggs_emp" />
+          <ScalarProperty Name="irtra_emp" ColumnName="irtra_emp" />
+          <ScalarProperty Name="bonopater_emp" ColumnName="bonopater_emp" />
+          <ScalarProperty Name="salario_total_emp" ColumnName="salario_total_emp" />
+          <ScalarProperty Name="salario_liquido_emp" ColumnName="salario_liquido_emp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usuarios">
+      <EntityTypeMapping TypeName="JAPONModel.usuarios">
+        <MappingFragment StoreEntitySet="usuarios">
+          <ScalarProperty Name="cod_usuario" ColumnName="cod_usuario" />
+          <ScalarProperty Name="nombre_usuario" ColumnName="nombre_usuario" />
+          <ScalarProperty Name="apellido_usuario" ColumnName="apellido_usuario" />
+          <ScalarProperty Name="correo_usuario" ColumnName="correo_usuario" />
+          <ScalarProperty Name="contra_usuario" ColumnName="contra_usuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,19 @@
+﻿body {
+    background: linear-gradient(to right, #bdc3c7, #2c3e50);
+}
+
+form{
+    position:center
+}
+div.datos_login{
+   
+    border-radius: 50px;
+    position:center;
+    width:60%;
+    padding-top:200px;
+}
+
+nav{
+    text-align:center;
+
+}

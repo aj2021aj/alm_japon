@@ -1,0 +1,15 @@
+﻿body {
+      background: linear-gradient(to right, #bdc3c7, #2c3e50);
+}
+nav {
+    text-align:center;
+    color:black;
+   
+}
+
+div{
+    
+     border-radius: 50px;
+     padding-top:20px;
+}
+
